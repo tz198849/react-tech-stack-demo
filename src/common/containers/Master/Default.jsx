@@ -8,7 +8,7 @@ import  Meta  from "../../components/basic/view";
 import  Refer  from "../../components/basic/refer";
 import  Tree  from "../../components/basic/tree"
 import  TabList  from "../../components/basic/tabs"
-//import  MySelect from "../../components/basic/divbox" //添加一个组建页面做个测试
+
 //import TitleSetting from '../TitleSetting'
 import {
   Row,
@@ -200,7 +200,7 @@ class Page extends Component {
     }*/
     return(
       <Row>
-        <Col className="numtopleft">
+        <Col>
           <Menu onClick={this.handleClick} mode="horizontal" theme="dark" >
             <Menu.Item key="indextree">
               <Icon type="bars" />
@@ -229,15 +229,16 @@ class Page extends Component {
             <Menu.Item >搜索</Menu.Item>
           </Menu>
         </Col>
-      
-        <Col span={4} className="treebg" xs={modal.lxs} sm={modal.lsm} md={modal.lmd} lg={modal.llg}>
+
+        <Col span={4} xs={modal.lxs} sm={modal.lsm} md={modal.lmd} lg={modal.llg}>
           <Tree titleField='menu_name' keyField='menu_code'
             expendall={true}
             treeData={TreeData}
             onSelect={this.onClick}
           />
         </Col>
-        <Col span={20} className="mainbg" xs={modal.rxs} sm={modal.rsm} md={modal.rmd} lg={modal.rlg}>
+        
+        <Col span={20} xs={modal.rxs} sm={modal.rsm} md={modal.rmd} lg={modal.rlg}>
           <TabList/>
         </Col>
       </Row>

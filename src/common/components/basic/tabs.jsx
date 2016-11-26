@@ -9,7 +9,8 @@ import { connect } from 'react-redux'
 import  Meta  from "../../components/basic/view";
 
 import {App} from "../../components/basic/caidan";
-import {Member} from "../../components/basic/memberSurvey";
+import {MemberS} from "../../components/basic/memberSurvey";
+import {AdvancedSearchForm} from "../../components/basic/memberQuery";
 
 import {
   Row,
@@ -25,7 +26,8 @@ import {
   Icon,
   Tabs,
   Upload,
-  Tooltip
+  Tooltip,
+  Form,
   // Tree,
 } from 'antd';
 
@@ -80,7 +82,7 @@ class TabList extends Component {
   };*/
 
   render(){
-
+    const WrappedAdvancedSearchForm = Form.create()(AdvancedSearchForm);
     let { tabs,tabsactions } = this.props;
     if(tabs.tabflag){//只有更新时候进入此分支
       let length = tabs.panes.length,//this.keylist.length>?this.keylist.length:tabs.panes.length;
@@ -135,10 +137,13 @@ class TabList extends Component {
                     <Col span={24} style={{border:'1px solid #adadad', padding:50}}>
                       <Tabs defaultActiveKey="1">
                         <TabPane tab={<span><Icon type="user" />会员概览</span>} key="1">
-                          <Member />
+                          <MemberS />
                         </TabPane>
                         <TabPane tab={<span><Icon type="search" />会员查询</span>} key="2">
-                          会员查询
+                          <div>
+                            <WrappedAdvancedSearchForm />
+                            <div className="search-result-list">Search Result List</div>
+                          </div>
                         </TabPane>
                         <TabPane tab={<span><Icon type="pushpin" />入会统计</span>} key="3">
                           入会统计

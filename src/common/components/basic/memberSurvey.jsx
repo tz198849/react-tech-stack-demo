@@ -1,19 +1,44 @@
 import React from 'react';
 import { Row,Col,Table, Icon, Switch, Radio, Form, Button } from 'antd';
 
-export const Member=React.createClass({
+var LineChart = require("react-chartjs").Pie;
+var MyComponent = React.createClass({
+  render: function() {
+    return <LineChart
+    width={250}
+    height={250}
+    data={
+      [
+        {value:10,color:'#622faa'},
+        {value:10,color:'#622faa'},
+        {value:10,color:'#622faa'}
+      ]
+    }  ></LineChart>
+  }
+});
+
+
+
+export const MemberS=React.createClass({
   render(){
     return (
       <Row>
 
         <Col><MemberSurvey /></Col>
 
-        <Col className="gutter-row" span={12} style={{background:'red'}}>
-          123
-        </Col>
-        <Col className="gutter-row" span={12} style={{background:'red'}}>
-          321
-        </Col>
+        <div className="gutter-example">
+          <Row gutter={16}>
+            <Col className="gutter-row" span={8}>
+              <div className="gutter-box"><MyComponent/></div>
+            </Col>
+            <Col className="gutter-row" span={8}>
+              <div className="gutter-box">111</div>
+            </Col>
+            <Col className="gutter-row" span={8}>
+              <div className="gutter-box">222</div>
+            </Col>
+          </Row>
+        </div>
 
       </Row>
     )

@@ -83,6 +83,132 @@ class TabList extends Component {
 
   render(){
     const WrappedAdvancedSearchForm = Form.create()(AdvancedSearchForm);
+
+    const columns = [{
+      title: '姓名',
+      dataIndex: 'name',
+      key: 'name',
+      render: text => <a href="#">{text}</a>,
+    }, {
+      title: '性别',
+      dataIndex: 'gender',
+      key: 'gender',
+    }, {
+      title: '手机号(卡号)',
+      key: 'tel',
+      render: (text, record) => (
+        <div>
+          <p>15001160904</p>
+          <p>卡号：12321312321</p>
+        </div>
+      ),
+    },{
+      title: '生日',
+      dataIndex: 'birthday',
+      key: 'birthday',
+    },{
+      title: '等级',
+      dataIndex: 'grade',
+      key: 'grade',
+    },{
+      title: '入会日期',
+      dataIndex: 'enterdate',
+      key: 'enterdate',
+    },{
+      title: '现金卡值',
+      dataIndex: 'cardvalue',
+      key: 'cardvalue',
+    },{
+      title: '现金卡值',
+      dataIndex: 'cardvalue',
+      key: 'cardvalue',
+    },{
+      title: '赠送卡值',
+      dataIndex: 'giftcard',
+      key: 'giftcard',
+    },{
+      title: '挂账金额',
+      dataIndex: 'billmoney',
+      key: 'billmoney',
+    },{
+      title: '挂账剩余可用额度',
+      dataIndex: 'billmoneys',
+      key: 'billmoneys',
+    },{
+      title: '积分余额',
+      dataIndex: 'integral',
+      key: 'integral',
+    },{
+      title: '累计储值总额',
+      dataIndex: 'storedvalue',
+      key: 'storedvalue',
+    },{
+      title: '累计消费总额',
+      dataIndex: 'consumption',
+      key: 'consumption',
+    },{
+      title: '状态',
+      dataIndex: 'state',
+      key: 'state',
+    },{
+      title: '查看',
+      dataIndex: 'see',
+      key: 'see',
+    }];
+
+    const data = [{
+      key: '1',
+      name: '名字',
+      gender: 32,
+      birthday: '1988-04-04',
+      grade:'vip1',
+      enterdate:'1988-99-99',
+      cardvalue:0,
+      giftcard:0,
+      billmoney:0,
+      billmoneys:0,
+      integral:0,
+      storedvalue:0,
+      consumption:0,
+      state:'注销',
+      see:'查看',
+
+    },{
+      key: '2',
+      name: '名字',
+      gender: 32,
+      birthday: '1988-04-04',
+      grade:'vip1',
+      enterdate:'1988-99-99',
+      cardvalue:0,
+      giftcard:0,
+      billmoney:0,
+      billmoneys:0,
+      integral:0,
+      storedvalue:0,
+      consumption:0,
+      state:'注销',
+      see:'查看',
+
+    },{
+      key: '3',
+      name: '名字',
+      gender: 32,
+      birthday: '1988-04-04',
+      grade:'vip1',
+      enterdate:'1988-99-99',
+      cardvalue:0,
+      giftcard:0,
+      billmoney:0,
+      billmoneys:0,
+      integral:0,
+      storedvalue:0,
+      consumption:0,
+      state:'注销',
+      see:'查看',
+
+    }];
+
     let { tabs,tabsactions } = this.props;
     if(tabs.tabflag){//只有更新时候进入此分支
       let length = tabs.panes.length,//this.keylist.length>?this.keylist.length:tabs.panes.length;
@@ -142,14 +268,13 @@ class TabList extends Component {
                         <TabPane tab={<span><Icon type="search" />会员查询</span>} key="2">
                           <div>
                             <WrappedAdvancedSearchForm />
-                            <div className="search-result-list">Search Result List</div>
+                            <div className="search-result-list"><Table columns={columns} dataSource={data} /></div>
                           </div>
                         </TabPane>
                         <TabPane tab={<span><Icon type="pushpin" />入会统计</span>} key="3">
                           入会统计
                         </TabPane>
                       </Tabs>
-
                     </Col>
                   </Row>
 

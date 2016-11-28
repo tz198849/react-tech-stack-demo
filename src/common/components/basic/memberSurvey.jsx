@@ -5,13 +5,16 @@ var LineChart = require("react-chartjs").Pie;
 var MyComponent = React.createClass({
   render: function() {
     return <LineChart
-    width={250}
-    height={250}
+    width={300}
+    height={300}
     data={
       [
-        {value:10,color:'#622faa'},
-        {value:10,color:'#622faa'},
-        {value:10,color:'#622faa'}
+        {value:20,color:'#c56de6'},
+        {value:5,color:'#5d57d5'},
+        {value:15,color:'#dd7a5c'},
+        {value:10,color:'#80ba3a'},
+        {value:25,color:'#d73785'},
+        {value:25,color:'#ee6373'}
       ]
     }  ></LineChart>
   }
@@ -29,13 +32,13 @@ export const MemberS=React.createClass({
         <div className="gutter-example">
           <Row gutter={16}>
             <Col className="gutter-row" span={8}>
-              <div className="gutter-box"><MyComponent/></div>
+              <div className="gutter-box" style={{textAlign:'center',padding:30}}><MyComponent/></div>
             </Col>
             <Col className="gutter-row" span={8}>
-              <div className="gutter-box">111</div>
+              <div className="gutter-box" style={{textAlign:'center',padding:30}}><MyComponent/></div>
             </Col>
             <Col className="gutter-row" span={8}>
-              <div className="gutter-box">222</div>
+              <div className="gutter-box" style={{textAlign:'center',padding:30}}><MyComponent/></div>
             </Col>
           </Row>
         </div>

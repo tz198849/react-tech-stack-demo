@@ -1,13 +1,12 @@
 import React from 'react'
-
 import * as actions from '../../common/redux/modules/user'
 
 export default function (router) {
   router.get('/test', function (ctx) {
     const pageInfo = {
-      title: '测试一下',
-      keyword: '',
-      description: '',
+      title: '会员相关',
+      keyword: '关键词',
+      description: '网站描述',
     }
 
     // TODO: 调用 dispatch，store 会得到数据

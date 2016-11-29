@@ -6,6 +6,7 @@ import { Router } from 'react-router';
 
 import {MemberS} from "../../components/basic/memberSurvey";//会员橄榄
 import {AdvancedSearchForm} from "../../components/basic/memberCx";//会员查询
+import {MStatistics} from "../../components/basic/rhStatistics";//入会统计
 
 import {
   Row,
@@ -63,7 +64,7 @@ export default class TestPage extends React.Component{
             <Menu.Item key="11">选项11</Menu.Item>
             <Menu.Item key="12">选项12</Menu.Item>
           </SubMenu>
-          <SubMenu key="sub4" title={<span><Icon type="notification" />第四导航</span>}>
+          <SubMenu key="sub4" title={<span><Icon type="question-circle-o" />第四导航</span>}>
             <Menu.Item key="13">选项9</Menu.Item>
             <Menu.Item key="14">选项10</Menu.Item>
             <Menu.Item key="15">选项11</Menu.Item>
@@ -102,7 +103,7 @@ export default class TestPage extends React.Component{
                   <WrappedAdvancedSearchForm />
                 {/*<div className="search-result-list">12</div>*/}
                 </TabPane>
-                <TabPane tab="入会统计" key="3">Content of Tab Pane 3</TabPane>
+                <TabPane tab="入会统计" key="3"><MStatistics /></TabPane>
               </Tabs>
 
 

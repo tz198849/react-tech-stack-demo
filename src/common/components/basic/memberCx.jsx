@@ -62,7 +62,7 @@ export class AdvancedSearchForm  extends React.Component {
             <Option value="女会员">女会员</Option>
             <Option value=">男会员" disabled>男会员</Option>
           </Select>,
-          <RangePicker />,
+          <RangePicker/>,
           <Select size="large" defaultValue="不限" style={{ width: '100%'}} onChange={handleChange}>
             <Option value="未知">未知</Option>
             <Option value="女会员">女会员</Option>
@@ -139,7 +139,7 @@ export class AdvancedSearchForm  extends React.Component {
           </Col>
 
           <Col span={24} style={{marginTop:20}}>
-            <Table columns={columns} dataSource={data} pagination={pagination} />
+            <Table columns={columns} dataSource={data} pagination={pagination} bordered  />
           </Col>
         </Row>
       )

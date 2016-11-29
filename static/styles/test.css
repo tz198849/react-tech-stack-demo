@@ -67,3 +67,15 @@
   border: 1px solid #d9d9d9;
   border-radius: 6px;
 }
+/*rhStatistics.jsx*/
+.table-operations {
+  font-size: 12px;
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.table-operations a {
+  margin-left: 8px;
+}
+
+.ant-calendar-range-picker-inputtest{height:30px}

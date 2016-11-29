@@ -1,26 +1,7 @@
 import React from 'react';
 import { Row,Col,Table, Icon, Switch, Radio, Form, Button } from 'antd';
 
-var LineChart = require("react-chartjs").Pie;
-var MyComponent = React.createClass({
-  render: function() {
-    return <LineChart
-    width={300}
-    height={300}
-    data={
-      [
-        {value:20,color:'#c56de6'},
-        {value:5,color:'#5d57d5'},
-        {value:15,color:'#dd7a5c'},
-        {value:10,color:'#80ba3a'},
-        {value:25,color:'#d73785'},
-        {value:25,color:'#ee6373'}
-      ]
-    }  ></LineChart>
-  }
-});
-
-
+//import {MemberPie} from "../../components/basic/memberPie";//统计图表
 
 export const MemberS=React.createClass({
   render(){
@@ -32,13 +13,13 @@ export const MemberS=React.createClass({
         <div className="gutter-example">
           <Row gutter={16}>
             <Col className="gutter-row" span={8}>
-              <div className="gutter-box" style={{textAlign:'center',padding:30}}><MyComponent/></div>
+              <div className="gutter-box" style={{textAlign:'center',padding:30}}></div>
             </Col>
             <Col className="gutter-row" span={8}>
-              <div className="gutter-box" style={{textAlign:'center',padding:30}}><MyComponent/></div>
+              <div className="gutter-box" style={{textAlign:'center',padding:30}}>2</div>
             </Col>
             <Col className="gutter-row" span={8}>
-              <div className="gutter-box" style={{textAlign:'center',padding:30}}><MyComponent/></div>
+              <div className="gutter-box" style={{textAlign:'center',padding:30}}>3</div>
             </Col>
           </Row>
         </div>
